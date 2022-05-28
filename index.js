@@ -10,7 +10,7 @@ custom.addEventListener("click", () => {
   });
 });
 
-window.addEventListener("keydown", () => {
+window.addEventListener("keyup", () => {
   if (
     bill.value.length > 1 ||
     custom.value.length > 1 ||
