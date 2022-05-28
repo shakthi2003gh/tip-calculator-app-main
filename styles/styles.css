@@ -41,6 +41,10 @@ input {
   color: var(--color-input-bg);
 }
 
+#custom::placeholder {
+  text-align: center;
+}
+
 .calculator > label {
   position: relative;
   font-size: 1.4rem;
@@ -87,7 +91,7 @@ input[type="number"] {
 }
 
 input[type="radio"] {
-  visibility: hidden;
+  display: none;
 }
 
 #bill,
@@ -138,7 +142,8 @@ input[type="radio"]:checked + span {
 
 /* Result */
 .result {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 3rem;
   padding: 2rem;
   border: none;
@@ -151,6 +156,7 @@ input[type="radio"]:checked + span {
 .tip-amount,
 .total {
   display: flex;
+  height: fit-content;
   justify-content: space-between;
 }
 
@@ -169,7 +175,6 @@ input[type="radio"]:checked + span {
 }
 
 button[type="reset"] {
-  align-self: end;
   outline: none;
   border: none;
   padding: 1rem;
@@ -178,4 +183,35 @@ button[type="reset"] {
   color: var(--color-primary);
   background-color: var(--color-highlight);
   filter: opacity(0.1);
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    background-position: 50% 6.5%;
+  }
+
+  form {
+    max-width: 1000px;
+    margin: 5rem auto;
+    margin-top: 15%;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #people {
+    margin-bottom: 0;
+  }
+
+  .result {
+    padding: 6rem 4rem 3rem;
+  }
+
+  .amount {
+    font-size: 5rem;
+  }
+
+  button[type="reset"] {
+    margin-top: auto;
+  }
 }
