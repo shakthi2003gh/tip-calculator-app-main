@@ -14,40 +14,73 @@
     <script src="/index.js" defer></script>
   </head>
   <body>
-    <form class="calculator">
-      <label for="bill">Bill</label>
-      <input type="number" id="bill" />
+    <form>
+      <fieldset class="calculator">
+        <label for="bill">Bill</label>
+        <input type="number" id="bill" placeholder="0" />
 
-      <label for="tip">Select Tip %</label>
-      <input type="radio" name="tip" id="tip" />5%
-      <input type="radio" name="tip" id="tip" />10%
-      <input type="radio" name="tip" id="tip" />15%
-      <input type="radio" name="tip" id="tip" />25%
-      <input type="radio" name="tip" id="tip" />50%
-      <!--TODO: change to text -->
-      <input type="radio" name="tip" id="tip" />Custom
+        <label for="tip-5%">Select Tip %</label>
+        <div class="tips">
+          <label for="tip-5%">
+            <input type="radio" value="5%" name="tip" id="tip-5%" />
+            <span>5%</span>
+          </label>
 
-      <label for="people">Number of People</label>
-      <input type="number" />
+          <label for="tip-10%">
+            <input type="radio" value="10%" name="tip" id="tip-10%" />
+            <span>10%</span>
+          </label>
 
-      <div class="result">
+          <label for="tip-15%">
+            <input type="radio" value="15%" name="tip" id="tip-15%" />
+            <span>15%</span>
+          </label>
+
+          <label for="tip-25%">
+            <input type="radio" value="25%" name="tip" id="tip-25%" />
+            <span>25%</span>
+          </label>
+
+          <label for="tip-50%">
+            <input type="radio" value="50%" name="tip" id="tip-50%" />
+            <span>50%</span>
+          </label>
+
+          <!-- TODO: what to learn -->
+          <label for="tip-custom">
+            <!-- <input type="radio" value="custom" name="tip" id="tip-custom" /> -->
+            <input
+              type="number"
+              id="tip-cstom"
+              min="0"
+              max="100"
+              placeholder="Custom"
+            />
+          </label>
+        </div>
+
+        <label for="people">Number of People</label>
+        <input type="number" min="0" max="100" placeholder="0" id="people" />
+      </fieldset>
+
+      <fieldset class="result">
         <div class="tip-amount">
-          <span> Tip Amount <br />/ person </span>
+          <span class="text"> Tip Amount <br />/ person </span>
 
-          <span class="amount"></span>
+          <span class="amount">$0.00</span>
         </div>
 
         <div class="total">
-          <span>
+          <span class="text">
             Total <br />
             / person
           </span>
 
-          <span class="amount"></span>
+          <span class="amount">$0.00</span>
         </div>
 
         <button type="reset">Reset</button>
-      </div>
+      </fieldset>
     </form>
   </body>
 </html>
