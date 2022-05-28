@@ -169,7 +169,8 @@ input[type="radio"]:checked + span {
   color: var(--color-accent);
 }
 
-.amount {
+.person-tip,
+.total-tip {
   font-size: 3.2rem;
   color: var(--color-highlight);
 }
@@ -197,6 +198,14 @@ button[type="reset"] {
     display: grid;
     gap: 4rem;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tips {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #custom::placeholder {
+    font-size: 2.2rem;
   }
 
   #people {
