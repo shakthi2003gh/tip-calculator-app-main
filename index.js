@@ -22,6 +22,8 @@ window.addEventListener("keydown", () => {
   calculate();
 });
 
+window.addEventListener("click", () => {calculate()});
+
 function calculate() {
   const billAmount = parseFloat(bill.value);
   let tipPercentage = parseFloat(custom.value / 100);
