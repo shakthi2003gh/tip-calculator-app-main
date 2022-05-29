@@ -98,6 +98,7 @@ input[type="radio"] {
 #people {
   margin-top: 1rem;
   margin-bottom: 3.5rem;
+  max-height: 46px;
 }
 
 label[for="bill"]::before,
